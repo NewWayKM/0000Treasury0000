@@ -9,8 +9,13 @@ public class PlayerShoot : MonoBehaviour
     public float bulletSpeed = 20f; // Скорость пули
 
     void Update()
-    {
+    {   /*/
         if (Input.GetButtonDown("Fire1"))
+        {
+            Shoot();
+        }
+        /*/
+        if (Cursor.lockState == CursorLockMode.Locked && Input.GetButtonDown("Fire1"))
         {
             Shoot();
         }
